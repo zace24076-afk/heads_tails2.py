@@ -8,7 +8,7 @@
 #-----------libraries--------------------
 
 import random
-
+import string
 #----------functions--------------------
 # Game play 
 def heads_tails():
