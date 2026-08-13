@@ -14,9 +14,9 @@ import string
 def heads_tails():
     user_score = 0
     comp_score = 0
-    
+    # Only loops when noone has won yet
     while comp_score != 3 and user_score != 3:
-        comp_guess = random.randint(0,1)
+        comp_guess = random.randint(0,1) # generates a random
         user_guess = int(input('Type 0 for Heads or 1 for Tails: '))
         
         if user_guess == comp_guess:
