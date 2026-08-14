@@ -35,7 +35,7 @@ def heads_tails():
 def force_name(first_name):
     while (valid): # this means the loop doesn't end until the name is valid
         name = input('What is your first name: ')
-        if(len(name) > min_len and len(name) < max_len ): #checking range
+        if(len(name) > min_len and len(name) < max_len ): #checking if their names a correct length
             if(name.isalpha()):
                 print('Your name is valid')
                 break # this exits the loop
@@ -46,9 +46,9 @@ def force_name(first_name):
     return first_name # sends the name back to the main routine
 
 def force_age(age):
-    while (valid):
+    while (valid): # this means the loop doesn't end until the name is valid
         age = int(input('What is your age: '))
-        if(age > min_age and age < max_age ): #checking range
+        if(age > min_age and age < max_age ): #checking if they are in the age range
             if(age.isalpha()):
                 print('Age is valid')
                 break # this exits the loop
@@ -60,6 +60,7 @@ def force_age(age):
 # -----------main_routine-----------------
 print('Hi, this is the heads and tails game')
 
+# Variables
 valid = True
 min_len = 2
 max_len = 20
@@ -74,3 +75,4 @@ force_age(age)
 age = int(input("Enter your age: "))
 
 heads_tails()
+
