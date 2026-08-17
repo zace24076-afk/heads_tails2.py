@@ -6,9 +6,7 @@
 '''
 
 #-----------libraries--------------------
-
 import random
-import string
 #----------functions--------------------
 # Game play 
 def heads_tails():
@@ -17,7 +15,15 @@ def heads_tails():
     # Only loops when noone has won yet
     while comp_score != 3 and user_score != 3:
         comp_guess = random.randint(0,1) # generates a random
-        user_guess = int(input('Type 0 for Heads or 1 for Tails: '))
+        # Checking to see if the user has inputed correctly 
+        # Check that there is no letters or 
+        # 
+        try: 
+            user_guess = int(input('Type 0 for Heads or 1 for Tails: '))
+        except:
+            if(user_guess.isaplha()):
+
+
         
         if user_guess == comp_guess:
             print('You won this round!')
@@ -36,7 +42,7 @@ def force_name(first_name):
     while (valid): # this means the loop doesn't end until the name is valid
         name = input('What is your first name: ')
         if(len(name) > min_len and len(name) < max_len ): #checking if their names a correct length
-            if(name.isalpha()):
+            if(name.isalpha()): #checking if the name only includes letters from the alphabet
                 print('Your name is valid')
                 break # this exits the loop
             else:
@@ -49,7 +55,7 @@ def force_age(age):
     while (valid): # this means the loop doesn't end until the name is valid
         age = int(input('What is your age: '))
         if(age > min_age and age < max_age ): #checking if they are in the age range
-            if(age.isalpha()):
+            if(age.isalpha()):#checking if the name only includes letters from the alphabet
                 print('Age is valid')
                 break # this exits the loop
             else:
